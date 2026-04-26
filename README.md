@@ -38,7 +38,7 @@ livros_e_emprestimos/
 
 1. Clone este repositório:
 ```bash
-git clone <URL-DO-REPOSITORIO>
+git clone https://github.com/JORD4N-01/livros_e_emprestimos
 cd livros_e_emprestimos
 ```
 

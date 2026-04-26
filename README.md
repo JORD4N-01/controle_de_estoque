@@ -130,3 +130,7 @@ Content-Type: application/json
 Sistema simples, funcionando e bem organizado.
 
 > "Melhor um sistema simples funcionando do que algo complexo quebrado."
+
+## 📄 Licença
+
+Este projeto está sob licença MIT.

@@ -38,7 +38,7 @@ livros_e_emprestimos/
 
 1. Clone este repositório:
 ```bash
-git clone <URL-DO-REPOSITORIO>
+git clone https://github.com/JORD4N-01/livros_e_emprestimos
 cd livros_e_emprestimos
 ```
 
@@ -130,7 +130,3 @@ Content-Type: application/json
 Sistema simples, funcionando e bem organizado.
 
 > "Melhor um sistema simples funcionando do que algo complexo quebrado."
-
-## 📄 Licença
-
-Este projeto está sob licença MIT.

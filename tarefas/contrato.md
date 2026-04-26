@@ -1,0 +1,55 @@
+# 📜 Contrato de Desenvolvimento — Biblioteca API
+
+## 🤖 Regra de Uso de IA (OBRIGATÓRIO)
+
+Ao gerar código com IA, SEMPRE:
+
+1. Informar explicitamente este contrato como contexto
+2. Pedir para seguir estritamente:
+   - nomes de campos
+   - estrutura JSON
+   - endpoints definidos
+3. Não permitir que a IA crie:
+   - novos campos
+   - novos nomes de atributos
+   - novas rotas fora do padrão
+
+4. Se houver conflito entre resposta da IA e este contrato:
+   👉 O CONTRATO SEMPRE VENCE
+
+## 🎯 Objetivo
+Garantir que todos os desenvolvedores (e ferramentas de IA) sigam o mesmo padrão, evitando inconsistências e problemas de integração.
+
+---
+
+## 🧠 Padrão Geral
+
+- Linguagem: Python
+- Framework: Flask
+- Comunicação: JSON
+- Projeto simples (sem banco de dados)
+- Armazenamento em memória (listas)
+
+---
+
+## 📦 Estrutura de Dados (OBRIGATÓRIA)
+
+### 📚 Livro
+
+```json
+{
+  "id": 1,
+  "titulo": "Dom Casmurro",
+  "autor": "Machado de Assis"
+}
+
+### 🔄 Empréstimo
+
+```json
+{
+  "id": 1,
+  "livro_id": 1,
+  "usuario": "João"
+}
+
+---

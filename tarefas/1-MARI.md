@@ -1,4 +1,4 @@
-# Modelagem (POO)
+# MARI - Modelagem (POO)
 
 ## Objetivo
 Responsável por criar a base do sistema utilizando Programação Orientada a Objetos (POO).

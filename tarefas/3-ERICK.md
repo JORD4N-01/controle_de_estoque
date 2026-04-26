@@ -1,4 +1,4 @@
-# 👨‍💻 Dev 3 — Lógica + Integração + Testes
+# ERICK - Lógica + Integração + Testes
 
 ## Objetivo
 Responsável por integrar o sistema e garantir que tudo funcione corretamente.

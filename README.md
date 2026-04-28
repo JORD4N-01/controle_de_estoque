@@ -1,10 +1,10 @@
-# 📚 Biblioteca API
+# � Controle de Estoque API
 
-Uma API REST simples para gerenciamento de livros e empréstimos desenvolvida com Python e Flask.
+Uma API REST simples para gerenciamento de produtos, entradas e saídas desenvolvida com Python e Flask.
 
 ## 🎯 Objetivo
 
-Sistema simples e funcional para gerenciar livros e empréstimos em uma biblioteca, com foco em organização e facilidade de uso.
+Sistema simples e funcional para controlar o estoque de produtos, registrando entradas (compras/recebimentos) e saídas (vendas/retiradas), com foco em organização e rastreabilidade.
 
 ## 🛠️ Stack Tecnológico
 
@@ -15,14 +15,15 @@ Sistema simples e funcional para gerenciar livros e empréstimos em uma bibliote
 ## 📁 Estrutura do Projeto
 
 ```
-livros_e_emprestimos/
+controle_estoque/
 ├── app.py              # Aplicação principal
 ├── models/             # Classes de dados
-│   ├── livro.py        # Classe Livro
-│   └── emprestimo.py   # Classe Emprestimo
+│   ├── produto.py      # Classe Produto
+│   ├── entrada.py      # Classe Entrada
+│   └── saida.py        # Classe Saida
 ├── routes/             # Endpoints da API
 │   └── routes.py       # Definição das rotas
-├── tarefas/            # Documentação do projeto
+├── docs/               # Documentação do projeto
 ├── requirements.txt    # Dependências do projeto
 └── README.md          # Este arquivo
 ```
@@ -38,8 +39,8 @@ livros_e_emprestimos/
 
 1. Clone este repositório:
 ```bash
-git clone https://github.com/JORD4N-01/livros_e_emprestimos
-cd livros_e_emprestimos
+git clone https://github.com/JORD4N-01/controle_estoque
+cd controle_estoque
 ```
 
 2. Instale as dependências:
@@ -56,15 +57,20 @@ A API estará disponível em `http://localhost:5000`
 
 ## 📡 Endpoints da API
 
-### Livros
+### Produtos
 
-- `GET /livros` - Lista todos os livros
-- `POST /livros` - Adiciona um novo livro
+- `GET /produtos` - Lista todos os produtos
+- `POST /produtos` - Cadastra um novo produto
 
-### Empréstimos
+### Entradas (Entrada de Estoque)
 
-- `GET /emprestimos` - Lista todos os empréstimos
-- `POST /emprestimos` - Realiza um novo empréstimo
+- `GET /entradas` - Lista todas as entradas
+- `POST /entradas` - Registra uma nova entrada de produto
+
+### Saídas (Saída de Estoque)
+
+- `GET /saidas` - Lista todas as saídas
+- `POST /saidas` - Registra uma nova saída de produto
 
 ## 🧪 Testes
 
@@ -76,29 +82,45 @@ Recomendamos usar o **Postman** para testar os endpoints:
 
 ## 📝 Exemplos de Uso
 
-### Adicionar um Livro
+### Cadastrar um Produto
 
 ```json
-POST /livros
+POST /produtos
 Content-Type: application/json
 
 {
-    "titulo": "O Senhor dos Anéis",
-    "autor": "J.R.R. Tolkien",
-    "isbn": "978-85-5941-128-6"
+    "nome": "Notebook Dell",
+    "descricao": "Notebook i5 8GB RAM",
+    "preco": 3500.00,
+    "quantidade_estoque": 10
 }
 ```
 
-### Realizar Empréstimo
+### Registrar Entrada de Estoque
 
 ```json
-POST /emprestimos
+POST /entradas
 Content-Type: application/json
 
 {
-    "livro_id": 1,
-    "pessoa": "João Silva",
-    "data_emprestimo": "2024-01-15"
+    "produto_id": 1,
+    "quantidade": 20,
+    "data": "2024-01-15",
+    "fornecedor": "Distribuidora Tech"
+}
+```
+
+### Registrar Saída de Estoque
+
+```json
+POST /saidas
+Content-Type: application/json
+
+{
+    "produto_id": 1,
+    "quantidade": 5,
+    "data": "2024-01-16",
+    "cliente": "Empresa ABC"
 }
 ```
 
@@ -113,7 +135,7 @@ Content-Type: application/json
 
 ### Equipe
 
-- **MARI** → Models (classes Livro e Emprestimo)
+- **MARI** → Models (classes Produto, Entrada e Saida)
 - **MARCOS** → Routes (endpoints da API)
 - **ERICK** → Lógica + Integração + Testes
 - **Jordan** → Integração final + organização

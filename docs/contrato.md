@@ -1,4 +1,4 @@
-# 📜 Contrato de Desenvolvimento — Biblioteca API
+# 📜 Contrato de Desenvolvimento — Controle de Estoque API
 
 ## 🤖 Regra de Uso de IA (OBRIGATÓRIO)
 
@@ -34,22 +34,38 @@ Garantir que todos os desenvolvedores (e ferramentas de IA) sigam o mesmo padrã
 
 ## 📦 Estrutura de Dados (OBRIGATÓRIA)
 
-### 📚 Livro
+### � Produto
 
 ```json
 {
   "id": 1,
-  "titulo": "Dom Casmurro",
-  "autor": "Machado de Assis"
+  "nome": "Notebook Dell",
+  "descricao": "Notebook i5 8GB RAM",
+  "preco": 3500.00,
+  "quantidade_estoque": 10
 }
+```
 
-### 🔄 Empréstimo
+### 📥 Entrada (Entrada de Estoque)
 
 ```json
 {
   "id": 1,
-  "livro_id": 1,
-  "usuario": "João"
+  "produto_id": 1,
+  "quantidade": 20,
+  "data": "2024-01-15",
+  "fornecedor": "Distribuidora Tech"
 }
+```
 
+### � Saída (Saída de Estoque)
+
+```json
+{
+  "id": 1,
+  "produto_id": 1,
+  "quantidade": 5,
+  "data": "2024-01-16",
+  "cliente": "Empresa ABC"
+}
 ---

@@ -1,4 +1,4 @@
-# 📏 Regras do Projeto — Biblioteca API
+# 📏 Regras do Projeto — Controle de Estoque API
 
 ## 🎯 Objetivo
 Manter o projeto organizado, funcional e sem conflitos entre os desenvolvedores.
@@ -17,7 +17,7 @@ Manter o projeto organizado, funcional e sem conflitos entre os desenvolvedores.
 
 NÃO criar arquivos fora dessa estrutura:
 
-biblioteca-api/
+controle-estoque/
 ├── app.py
 ├── models/
 ├── routes/
@@ -26,9 +26,9 @@ biblioteca-api/
 
 ## 👨‍💻 Responsabilidades
 
-- **MARI** → `models/` (classes Livro e Emprestimo)
+- **MARI** → `models/` (classes Produto, Entrada e Saida)
 - **MARCOS** → `routes/` (endpoints da API)
-- **Dev 3** → lógica + integração + testes
+- **ERICK** → lógica + integração + testes
 - (Jordan) → integração final + organização
 
 ---
@@ -45,8 +45,8 @@ biblioteca-api/
 ## 📌 Padrão de Código
 
 - Usar nomes em **português**
-  - `Livro`, `Emprestimo`
-  - `/livros`, `/emprestimos`
+  - `Produto`, `Entrada`, `Saida`
+  - `/produtos`, `/entradas`, `/saidas`
 
 - Manter consistência:
   - mesmo padrão de indentação
@@ -56,13 +56,17 @@ biblioteca-api/
 
 ## 🔗 API (Padrão obrigatório)
 
-### Livros
-- GET /livros
-- POST /livros
+### Produtos
+- GET /produtos
+- POST /produtos
 
-### Empréstimos
-- GET /emprestimos
-- POST /emprestimos
+### Entradas
+- GET /entradas
+- POST /entradas
+
+### Saídas
+- GET /saidas
+- POST /saidas
 
 ---
 

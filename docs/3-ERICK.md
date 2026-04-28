@@ -6,11 +6,15 @@ Responsável por integrar o sistema e garantir que tudo funcione corretamente.
 ## Tarefas
 
 - Criar armazenamento em memória:
-  - Lista de livros
-  - Lista de empréstimos
+  - Lista de produtos
+  - Lista de entradas
+  - Lista de saídas
 
 - Implementar regras básicas:
-  - Verificar se o livro existe antes de emprestar
+  - Verificar se o produto existe antes de registrar entrada/saída
+  - Atualizar quantidade em estoque ao registrar entrada (aumenta)
+  - Atualizar quantidade em estoque ao registrar saída (diminui)
+  - Verificar se há estoque suficiente antes de permitir saída
   - Evitar dados inválidos
 
 - Integrar:
@@ -20,13 +24,17 @@ Responsável por integrar o sistema e garantir que tudo funcione corretamente.
 ## Testes
 
 - Utilizar Postman para testar:
-  - GET /livros
-  - POST /livros
-  - GET /emprestimos
-  - POST /emprestimos
+  - GET /produtos
+  - POST /produtos
+  - GET /entradas
+  - POST /entradas
+  - GET /saidas
+  - POST /saidas
 
 - Garantir que:
   - API responde corretamente
+  - Quantidade em estoque é atualizada corretamente
+  - Não é permitido saída sem estoque suficiente
   - Não há erros
 
 ## Observações

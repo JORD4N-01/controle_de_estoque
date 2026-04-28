@@ -5,20 +5,33 @@ Responsável por criar a base do sistema utilizando Programação Orientada a Ob
 
 ## Tarefas
 
-- Criar a classe `Livro`
+- Criar a classe `Produto`
   - Atributos:
     - id
-    - titulo
-    - autor
+    - nome
+    - descricao
+    - preco
+    - quantidade_estoque
 
-- Criar a classe `Emprestimo`
+- Criar a classe `Entrada`
   - Atributos:
     - id
-    - livro_id
-    - usuario
+    - produto_id
+    - quantidade
+    - data
+    - fornecedor
 
-- Definir o relacionamento:
-  - Um empréstimo deve estar ligado a um livro
+- Criar a classe `Saida`
+  - Atributos:
+    - id
+    - produto_id
+    - quantidade
+    - data
+    - cliente
+
+- Definir os relacionamentos:
+  - Uma entrada deve estar ligada a um produto
+  - Uma saída deve estar ligada a um produto
 
 ## Observações
 
@@ -29,5 +42,6 @@ Responsável por criar a base do sistema utilizando Programação Orientada a Ob
 ## Entregável
 
 - Arquivos:
-  - models/livro.py
-  - models/emprestimo.py
+  - models/produto.py
+  - models/entrada.py
+  - models/saida.py

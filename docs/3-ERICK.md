@@ -5,7 +5,7 @@ Responsável por integrar o sistema e garantir que tudo funcione corretamente.
 
 ## Tarefas
 
-- Criar armazenamento em memória:
+- Criar armazenamento em memória (mockdata/hardcoded):
   - Lista de produtos
   - Lista de entradas
   - Lista de saídas
@@ -41,6 +41,7 @@ Responsável por integrar o sistema e garantir que tudo funcione corretamente.
 
 - Essa função é crítica para a apresentação
 - Se algo quebrar, é aqui que resolve
+- Todos os dados devem ser mockados (hardcoded) em listas em memória, sem persistência e sem banco de dados
 
 ## Entregável
 

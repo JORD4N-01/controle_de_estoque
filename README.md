@@ -11,6 +11,7 @@ Sistema simples e funcional para controlar o estoque de produtos, registrando en
 - **Python** - Linguagem principal
 - **Flask** - Framework web
 - **JSON** - Formato de dados para requisições e respostas
+- **Mockdata** - Dados armazenados em memória (hardcoded), sem integração com banco de dados
 
 ## 📁 Estrutura do Projeto
 
@@ -28,6 +29,14 @@ controle_estoque/
 └── README.md          # Este arquivo
 ```
 
+
+## ℹ️ Observação Importante
+
+Este projeto **NÃO utiliza banco de dados**. Todos os dados são armazenados em listas em memória (mockdata/hardcoded) apenas para fins de simulação e testes.
+
+Ao reiniciar a aplicação, todos os dados voltam ao estado inicial.
+
+---
 ## 🚀 Como Usar
 
 ### Pré-requisitos

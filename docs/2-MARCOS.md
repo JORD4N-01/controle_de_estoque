@@ -29,6 +29,7 @@ Responsável por criar os endpoints da API utilizando Flask.
 
 - Não precisa implementar lógica complexa
 - Focar em fazer a API funcionar corretamente
+- As rotas devem manipular dados mockados (hardcoded) em listas em memória, sem integração com banco de dados
 
 ## Entregável
 

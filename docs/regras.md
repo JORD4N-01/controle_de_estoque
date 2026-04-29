@@ -10,6 +10,8 @@ Manter o projeto organizado, funcional e sem conflitos entre os desenvolvedores.
 - Utilizar **Python com Flask**
 - Trabalhar com **JSON** nas requisições e respostas
 - Código simples, limpo e funcional (não complicar)
+- **NÃO usar banco de dados**
+- Armazenamento dos dados em memória (listas mockadas/hardcoded)
 
 ---
 

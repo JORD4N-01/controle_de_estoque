@@ -28,7 +28,7 @@ Garantir que todos os desenvolvedores (e ferramentas de IA) sigam o mesmo padrã
 - Framework: Flask
 - Comunicação: JSON
 - Projeto simples (sem banco de dados)
-- Armazenamento em memória (listas)
+- Armazenamento em memória (listas mockadas/hardcoded, sem persistência)
 
 ---
 

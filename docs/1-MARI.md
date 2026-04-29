@@ -37,6 +37,7 @@ Responsável por criar a base do sistema utilizando Programação Orientada a Ob
 
 - O código deve ser simples e organizado
 - Não precisa usar banco de dados, apenas estrutura de classes
+- Os dados serão mockados (hardcoded) em listas em memória, sem persistência
 - Manter padrão de nomes definido pelo Tech Lead
 
 ## Entregável

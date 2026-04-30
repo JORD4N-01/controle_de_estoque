@@ -1,48 +1,158 @@
-# MARI - Modelagem (POO)
+# 🧩 Tarefa — MARI (Modelagem com POO)
 
-## Objetivo
-Responsável por criar a base do sistema utilizando Programação Orientada a Objetos (POO).
+## 🎯 Objetivo
+Criar as classes do sistema que representam os dados do controle de estoque.
 
-## Tarefas
+Você será responsável por estruturar os objetos principais do sistema utilizando Programação Orientada a Objetos (POO).
 
-- Criar a classe `Produto`
-  - Atributos:
-    - id
-    - nome
-    - descricao
-    - preco
-    - quantidade_estoque
+---
 
-- Criar a classe `Entrada`
-  - Atributos:
-    - id
-    - produto_id
-    - quantidade
-    - data
-    - fornecedor
+# 📦 Classes que devem ser criadas
 
-- Criar a classe `Saida`
-  - Atributos:
-    - id
-    - produto_id
-    - quantidade
-    - data
-    - cliente
+Você deve criar 3 classes:
 
-- Definir os relacionamentos:
-  - Uma entrada deve estar ligada a um produto
-  - Uma saída deve estar ligada a um produto
+- Produto
+- Entrada
+- Saida
 
-## Observações
+Cada classe representa uma parte do sistema.
 
-- O código deve ser simples e organizado
-- Não precisa usar banco de dados, apenas estrutura de classes
-- Os dados serão mockados (hardcoded) em listas em memória, sem persistência
-- Manter padrão de nomes definido pelo Tech Lead
+---
 
-## Entregável
+# 🧠 O que você precisa implementar
 
-- Arquivos:
-  - models/produto.py
-  - models/entrada.py
-  - models/saida.py
+## 📌 1. Método construtor (`__init__`)
+
+### O que fazer:
+Criar o método que inicializa os dados da classe.
+
+### Por quê:
+Sem esse método, não conseguimos criar objetos com informações definidas.
+
+### Exemplo conceitual:
+> Quando criamos um produto, precisamos definir id, nome e quantidade.
+
+---
+
+## 📌 2. Método de conversão (`to_dict`)
+
+### O que fazer:
+Criar um método que transforme o objeto em um formato de dicionário.
+
+### Por quê:
+A API trabalha com JSON, então precisamos converter os objetos para esse formato.
+
+### Importante:
+- Retornar um dicionário com os atributos da classe
+- Os nomes devem seguir o padrão do projeto
+
+---
+
+## 📌 3. Métodos de comportamento (somente para Produto)
+
+### 📥 Entrada de estoque
+
+#### O que fazer:
+Criar um método que aumente a quantidade do produto.
+
+#### Por quê:
+Quando um produto entra no estoque, sua quantidade deve ser atualizada.
+
+---
+
+### 📤 Saída de estoque
+
+#### O que fazer:
+Criar um método que diminua a quantidade do produto.
+
+#### Por quê:
+Quando um produto sai do estoque, precisamos reduzir a quantidade.
+
+---
+
+### ⚠️ Validação (importante)
+
+#### O que fazer:
+Garantir que não seja possível remover mais produtos do que existe.
+
+#### Por quê:
+Evita erros e mantém o sistema consistente.
+
+---
+
+# 📚 Estrutura esperada das classes
+
+## Produto
+Deve conter:
+- id
+- nome
+- quantidade
+
+Deve possuir:
+- construtor
+- método de conversão (to_dict)
+- método de adicionar estoque
+- método de remover estoque
+
+---
+
+## Entrada
+Deve conter:
+- id
+- produto_id
+- quantidade
+
+Deve possuir:
+- construtor
+- método de conversão (to_dict)
+
+---
+
+## Saida
+Deve conter:
+- id
+- produto_id
+- quantidade
+
+Deve possuir:
+- construtor
+- método de conversão (to_dict)
+
+---
+
+# ⚠️ Regras importantes
+
+- Não inventar atributos novos
+- Seguir exatamente os nomes definidos
+- Não adicionar funcionalidades fora do escopo
+- Manter o código simples
+
+---
+
+# 🏆 Dica
+
+> Pense nas classes como “representações do mundo real”.
+
+Produto → algo no estoque  
+Entrada → algo chegando  
+Saída → algo saindo  
+
+---
+
+# 🎯 Objetivo final
+
+Quando terminar, você deve conseguir:
+
+- Criar objetos corretamente
+- Representar os dados do sistema
+- Preparar os dados para serem usados pela API
+
+---
+
+# 👑 Observação final
+
+Se tiver dúvida:
+- volte para o contrato.md
+- ou pergunte antes de mudar algo
+
+👉 Isso evita retrabalho para todo o grupo

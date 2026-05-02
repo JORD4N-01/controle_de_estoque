@@ -5,12 +5,12 @@ class Saida:
         self.quantidade = quantidade
         self.data = data
         self.cliente = cliente
-    
+
     def to_dict(self):
-        return{
+        return {
             "id": self.id,
             "produto_id": self.produto_id,
             "quantidade": self.quantidade,
             "data": self.data,
-            "cliente": self.cliente
+            "cliente": self.cliente,
         }

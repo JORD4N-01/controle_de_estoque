@@ -12,5 +12,5 @@ class Entrada:
             "produto_id": self.produto_id,
             "quantidade": self.quantidade,
             "data": self.data,
-            "fornecedor": self.fornecedor
+            "fornecedor": self.fornecedor,
         }

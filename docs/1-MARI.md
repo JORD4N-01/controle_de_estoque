@@ -101,6 +101,8 @@ Deve conter:
 - id
 - produto_id
 - quantidade
+- data
+- fornecedor
 
 Deve possuir:
 - construtor
@@ -113,6 +115,8 @@ Deve conter:
 - id
 - produto_id
 - quantidade
+- data
+- cliente
 
 Deve possuir:
 - construtor

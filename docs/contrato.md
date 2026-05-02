@@ -40,9 +40,7 @@ Garantir que todos os desenvolvedores (e ferramentas de IA) sigam o mesmo padrã
 {
   "id": 1,
   "nome": "Notebook Dell",
-  "descricao": "Notebook i5 8GB RAM",
-  "preco": 3500.00,
-  "quantidade_estoque": 10
+  "quantidade": 10
 }
 ```
 

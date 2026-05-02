@@ -1,24 +1,20 @@
 class Produto:
-    def __init__(self, id, nome, descricao, preco, quantidade_estoque):
+    def __init__(self, id, nome, quantidade):
         self.id = id
         self.nome = nome
-        self.descricao = descricao
-        self.preco = preco
-        self.quantidade_estoque = quantidade_estoque
+        self.quantidade = quantidade
 
     def to_dict(self):
         return {
             "id": self.id,
             "nome": self.nome,
-            "descricao": self.descricao,
-            "preco": self.preco,
-            "quantidade_estoque": self.quantidade_estoque 
+            "quantidade": self.quantidade,
         }
 
     def adicionar_estoque(self, quantidade):
-        self.quantidade_estoque += quantidade
+        self.quantidade += quantidade
 
     def remover_estoque(self, quantidade):
-        if quantidade > self.quantidade_estoque:
+        if quantidade > self.quantidade:
             return "Quantidade insuficiente"
-        self.quantidade_estoque -= quantidade
+        self.quantidade -= quantidade

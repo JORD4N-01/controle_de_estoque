@@ -54,7 +54,7 @@ cd controle_estoque
 
 2. Instale as dependências:
 ```bash
-pip install -r requirements.txt
+pip install -r requeriments.txt
 ```
 
 3. Execute a aplicação:
@@ -99,9 +99,7 @@ Content-Type: application/json
 
 {
     "nome": "Notebook Dell",
-    "descricao": "Notebook i5 8GB RAM",
-    "preco": 3500.00,
-    "quantidade_estoque": 10
+    "quantidade": 10
 }
 ```
 

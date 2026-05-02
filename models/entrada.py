@@ -5,3 +5,12 @@ class Entrada:
         self.quantidade = quantidade
         self.data = data
         self.fornecedor = fornecedor
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "produto_id": self.produto_id,
+            "quantidade": self.quantidade,
+            "data": self.data,
+            "fornecedor": self.fornecedor
+        }

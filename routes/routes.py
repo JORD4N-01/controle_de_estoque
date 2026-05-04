@@ -9,13 +9,21 @@ routes_bp = Blueprint("routes", __name__)
 # ======================
 # MOCK DATA (em memória)
 # ======================
-produtos = []
+produtos = [
+    Produto(id=1, nome="Notebook Dell", quantidade=10),
+    Produto(id=2, nome="Mouse Logitech", quantidade=25),
+    Produto(id=3, nome="Teclado Mecânico", quantidade=8),
+]
 entradas = []
 saidas = []
 
 
 def _json_body():
     return request.get_json(silent=True) or {}
+
+
+def _texto_valido(valor):
+    return isinstance(valor, str) and valor.strip() != ""
 
 
 def _find_produto(produto_id: int):
@@ -42,8 +50,10 @@ def criar_produto():
     nome = data.get("nome")
     quantidade = data.get("quantidade", 0)
 
-    if not nome:
+    if not _texto_valido(nome):
         return jsonify({"erro": "Campo 'nome' é obrigatório"}), 400
+
+    nome = nome.strip()
 
     try:
         quantidade = int(quantidade)
@@ -80,6 +90,12 @@ def registrar_entrada():
 
     if quantidade <= 0:
         return jsonify({"erro": "Campo 'quantidade' deve ser maior que zero"}), 400
+
+    if not _texto_valido(data.get("data")):
+        return jsonify({"erro": "Campo 'data' é obrigatório"}), 400
+
+    if not _texto_valido(data.get("fornecedor")):
+        return jsonify({"erro": "Campo 'fornecedor' é obrigatório"}), 400
 
     produto = _find_produto(produto_id)
     if produto is None:
@@ -120,6 +136,12 @@ def registrar_saida():
 
     if quantidade <= 0:
         return jsonify({"erro": "Campo 'quantidade' deve ser maior que zero"}), 400
+
+    if not _texto_valido(data.get("data")):
+        return jsonify({"erro": "Campo 'data' é obrigatório"}), 400
+
+    if not _texto_valido(data.get("cliente")):
+        return jsonify({"erro": "Campo 'cliente' é obrigatório"}), 400
 
     produto = _find_produto(produto_id)
     if produto is None:

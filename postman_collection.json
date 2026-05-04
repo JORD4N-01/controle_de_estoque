@@ -1,0 +1,148 @@
+{
+  "info": {
+    "_postman_id": "2f5f4ef7-7fbb-4f6e-bf1a-0f8f3f2dcb11",
+    "name": "Controle de Estoque - 9 testes",
+    "description": "Colecao com 9 requests para validar produtos, entradas e saidas.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:5000"
+    }
+  ],
+  "item": [
+    {
+      "name": "1) GET /produtos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos",
+          "host": ["{{baseUrl}}"],
+          "path": ["produtos"]
+        }
+      }
+    },
+    {
+      "name": "2) POST /produtos - criar Monitor LG",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Monitor LG\",\n  \"quantidade\": 12\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/produtos",
+          "host": ["{{baseUrl}}"],
+          "path": ["produtos"]
+        }
+      }
+    },
+    {
+      "name": "3) POST /entradas - adicionar +5 no produto 1",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"produto_id\": 1,\n  \"quantidade\": 5,\n  \"data\": \"2026-05-04\",\n  \"fornecedor\": \"Distribuidora X\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/entradas",
+          "host": ["{{baseUrl}}"],
+          "path": ["entradas"]
+        }
+      }
+    },
+    {
+      "name": "4) GET /produtos - conferir aumento de estoque",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos",
+          "host": ["{{baseUrl}}"],
+          "path": ["produtos"]
+        }
+      }
+    },
+    {
+      "name": "5) POST /saidas - remover -3 no produto 1",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"produto_id\": 1,\n  \"quantidade\": 3,\n  \"data\": \"2026-05-04\",\n  \"cliente\": \"Cliente A\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/saidas",
+          "host": ["{{baseUrl}}"],
+          "path": ["saidas"]
+        }
+      }
+    },
+    {
+      "name": "6) GET /produtos - conferir reducao de estoque",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos",
+          "host": ["{{baseUrl}}"],
+          "path": ["produtos"]
+        }
+      }
+    },
+    {
+      "name": "7) POST /saidas - estoque insuficiente (deve dar 400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"produto_id\": 1,\n  \"quantidade\": 9999,\n  \"data\": \"2026-05-04\",\n  \"cliente\": \"Cliente B\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/saidas",
+          "host": ["{{baseUrl}}"],
+          "path": ["saidas"]
+        }
+      }
+    },
+    {
+      "name": "8) GET /entradas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/entradas",
+          "host": ["{{baseUrl}}"],
+          "path": ["entradas"]
+        }
+      }
+    },
+    {
+      "name": "9) GET /saidas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/saidas",
+          "host": ["{{baseUrl}}"],
+          "path": ["saidas"]
+        }
+      }
+    }
+  ]
+}
